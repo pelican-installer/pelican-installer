@@ -138,6 +138,7 @@ configure() {
   # Fill in environment:setup automatically
   php artisan p:environment:setup
   sed -i "s|^APP_URL=.*|APP_URL=${app_url}|" .env
+  sed -i "s|^APP_INSTALLED=false|APP_INSTALLED=true|" .env
 
   # Fill in environment:database credentials automatically
   php artisan p:environment:database \
